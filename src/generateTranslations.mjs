@@ -39,8 +39,6 @@ async function main() {
   else if (args.in && fs.existsSync(args.in)) {
     textCSV = fs.readFileSync(args.in, { encoding: 'utf8', flag: 'r' })
   }
-
-    console.log(textCSV)
   if (!textCSV) {
     console.log('Could not extract the text for csv. Exiting.')
     return
