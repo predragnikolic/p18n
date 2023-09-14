@@ -3,7 +3,7 @@
     "p18n": "./src/generateTranslations.mjs"
   },
   "name": "@predragnikolic/p18n",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Script to generate translations files from local or remote csv.",
   "license": "MIT",
   "repository": {
