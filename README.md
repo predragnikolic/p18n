@@ -6,22 +6,22 @@ Generate translation files based on a CSV file.
 
 Add a `translate` script in package.json:
 
-Example 1 - remote CSV:
+Remote CSV example:
 ```jsonc
 {
-	"scripts": {
-		"translate": "p18n --locales=en,sr,de --out=./i18n/messages --in='https://docs.google.com/spreadsheets/d/1PWfDNHxkEBRknzssW5T7ihaiXDQFndJtxBr8AbWUxcU/gviz/tq?tqx=out:csv&gid=0'"
-	}
+  "scripts": {
+    "translate": "p18n --locales=en,sr,de --out=./i18n/messages --in='https://docs.google.com/spreadsheets/d/1PWfDNHxkEBRknzssW5T7ihaiXDQFndJtxBr8AbWUxcU/gviz/tq?tqx=out:csv&gid=0'"
+  }
 }
 ```
 > NOTE: when using google docs, make sure to make the sheet publicly available for reading.
 
-Example 2 - local CSV:
+Local CSV example:
 ```jsonc
 {
-	"scripts": {
-		"translate": "p18n --locales=en,sr,de --out=./i18n/messages --in=./translations.csv",
-	}
+  "scripts": {
+    "translate": "p18n --locales=en,sr,de --out=./i18n/messages --in=./translations.csv",
+  }
 }
 ```
 
