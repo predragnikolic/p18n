@@ -1,20 +1,33 @@
 # p18n
 
+Generate translation files based on a CSV file.
+
 ### Configuration
 
-Add scripts in package.json:
+Add a `translate` script in package.json:
+
+Example 1 - remote CSV:
 ```jsonc
 {
 	"scripts": {
-		// Example for a local csv
-		"translate:local": "p18n --locales=en,sr,de --out=./i18n/messages --in=./translations.csv",
-		// Example when using google sheet to host translations
-		"translate:remote": "p18n --locales=en,sr,de --out=./i18n/messages --in='https://docs.google.com/spreadsheets/d/1PWfDNHxkEBRknzssW5T7ihaiXDQFndJtxBr8AbWUxcU/gviz/tq?tqx=out:csv&gid=0'"
+		"translate": "p18n --locales=en,sr,de --out=./i18n/messages --in='https://docs.google.com/spreadsheets/d/1PWfDNHxkEBRknzssW5T7ihaiXDQFndJtxBr8AbWUxcU/gviz/tq?tqx=out:csv&gid=0'"
+	}
+}
+```
+> NOTE: when using google docs, make sure to make the sheet publicly available for reading.
+
+Example 2 - local CSV:
+```jsonc
+{
+	"scripts": {
+		"translate": "p18n --locales=en,sr,de --out=./i18n/messages --in=./translations.csv",
 	}
 }
 ```
 
-> NOTE: when using google docs, make sure to make the sheet publicly available for reading.
+Then run `npm run translate`. That will generate the translation files in the `--out` directory.
 
+# Help
 
+Run `npx p18n` to get docs for the available commands.
 
